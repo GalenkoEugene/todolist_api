@@ -18,6 +18,7 @@ gem 'rails', '~> 5.1.4'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'ffaker', '~> 2.6'
   gem 'overcommit', '~> 0.41'
 end
 
