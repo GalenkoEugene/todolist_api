@@ -15,6 +15,6 @@ class Api::V1::ProjectsController < ApplicationController
 
   api :GET, '/projects', "Return user's projects"
   def index
-    render json: @projects = Project.all
+    @projects = Project.all
   end
 end

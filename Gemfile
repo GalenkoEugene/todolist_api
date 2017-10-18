@@ -20,6 +20,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'ffaker', '~> 2.7'
   gem 'overcommit', '~> 0.41'
+  gem 'rspec-rails', '~> 3.6'
 end
 
 group :development do
@@ -31,11 +32,9 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '~> 2.15'
   gem 'database_cleaner', '~> 1.6'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'rails-controller-testing', '~> 1.0'
-  gem 'rspec-rails', '~> 3.6'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', '~> 0.15', require: false
 end
