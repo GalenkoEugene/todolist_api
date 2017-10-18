@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :project do
-    name 'MyString'
-    user nil
+    name { FFaker::Internet.user_name }
+    user
   end
 end
