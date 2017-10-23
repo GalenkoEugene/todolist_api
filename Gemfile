@@ -10,15 +10,15 @@ gem 'apipie-rails', '~> 0.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'cancancan', '~> 2.0'
 gem 'devise_token_auth', '~> 0.1'
+gem 'ffaker', '~> 2.7'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
-gem 'rack-cors', '~> 1.0'
+gem 'rack-cors', '~> 1.0', require: 'rack/cors'
 gem 'rails', '~> 5.1.4'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'ffaker', '~> 2.7'
   gem 'overcommit', '~> 0.41'
   gem 'rspec-rails', '~> 3.6'
 end
