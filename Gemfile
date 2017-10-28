@@ -18,8 +18,8 @@ gem 'rack-cors', '~> 1.0', require: 'rack/cors'
 gem 'rails', '~> 5.1.4'
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'overcommit', '~> 0.41'
+  gem 'pry-byebug', '3.4.2'
   gem 'rspec-rails', '~> 3.6'
 end
 
