@@ -1,0 +1,162 @@
+{
+  "projects#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "project": {
+          "name": "Hard Boiled Brain"
+        }
+      },
+      "response_data": {
+        "id": 6,
+        "name": "Hard Boiled Brain",
+        "user_id": 2,
+        "created_at": "2017-10-29T17:17:44.769Z",
+        "updated_at": "2017-10-29T17:17:44.769Z"
+      },
+      "code": "201",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "project": {
+          "name": "The Ninjas Without a Monster"
+        }
+      },
+      "response_data": {
+        "errors": [
+          "You need to sign in or sign up before continuing."
+        ]
+      },
+      "code": "401",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "project": {
+          "name": ""
+        }
+      },
+      "response_data": {
+        "name": [
+          "can't be blank"
+        ]
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/projects/15",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+      },
+      "response_data": {
+      },
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1,
+          "name": "jone_orn",
+          "user_id": 1,
+          "created_at": "2017-10-29T17:17:44.453Z",
+          "updated_at": "2017-10-29T17:17:44.453Z"
+        },
+        {
+          "id": 2,
+          "name": "albert",
+          "user_id": 1,
+          "created_at": "2017-10-29T17:17:44.458Z",
+          "updated_at": "2017-10-29T17:17:44.458Z"
+        },
+        {
+          "id": 3,
+          "name": "ingrid_feil",
+          "user_id": 1,
+          "created_at": "2017-10-29T17:17:44.463Z",
+          "updated_at": "2017-10-29T17:17:44.463Z"
+        },
+        {
+          "id": 4,
+          "name": "marlin",
+          "user_id": 1,
+          "created_at": "2017-10-29T17:17:44.468Z",
+          "updated_at": "2017-10-29T17:17:44.468Z"
+        },
+        {
+          "id": 5,
+          "name": "stacie",
+          "user_id": 1,
+          "created_at": "2017-10-29T17:17:44.473Z",
+          "updated_at": "2017-10-29T17:17:44.473Z"
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/projects/11",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "project": {
+          "name": "New owesome name"
+        }
+      },
+      "response_data": {
+        "user_id": 4,
+        "id": 11,
+        "name": "New owesome name",
+        "created_at": "2017-10-29T17:17:45.110Z",
+        "updated_at": "2017-10-29T17:17:45.201Z"
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}

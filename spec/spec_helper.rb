@@ -4,6 +4,7 @@ if ENV['RAILS_ENV'] == 'test'
   puts 'required simplecov'
 end
 require 'database_cleaner'
+require 'json_matchers/rspec'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

@@ -3,7 +3,7 @@ class Api::V1::ProjectsController < ApplicationController
   load_and_authorize_resource through: :current_user
 
   resource_description do
-    short 'Projects'
+    short "User's pojects"
     error code: 401, desc: 'Unauthorized'
     error code: 422, desc: 'Unprocessable entity'
     formats ['json']
@@ -17,6 +17,7 @@ class Api::V1::ProjectsController < ApplicationController
 
   api :GET, '/projects', "Return user's projects"
   def index
+    render json: @projects
   end
 
   api :POST, '/projects', 'Create new project'
@@ -30,11 +31,11 @@ class Api::V1::ProjectsController < ApplicationController
   param_group :project
   param :id, String, required: true
   def update
-    return @project, status: :ok if @project.update(project_params)
+    return render json: @project, status: :ok if @project.update(project_params)
     render json: @project.errors.full_messages, status: :unprocessable_entity
   end
 
-  api :DELETE, '/projects/:id', 'Desroy certain list'
+  api :DELETE, '/projects/:id', 'Desroy certain list of tasks with project'
   param :id, String, required: true
   def destroy
     @project.destroy
