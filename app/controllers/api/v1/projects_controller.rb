@@ -29,14 +29,14 @@ class Api::V1::ProjectsController < ApplicationController
 
   api :PUT, '/projects/:id', 'Update project name'
   param_group :project
-  param :id, String, required: true
+  param :id, :number, required: true
   def update
     return render json: @project, status: :ok if @project.update(project_params)
     render json: @project.errors.full_messages, status: :unprocessable_entity
   end
 
   api :DELETE, '/projects/:id', 'Desroy certain list of tasks with project'
-  param :id, String, required: true
+  param :id, :number, required: true
   def destroy
     @project.destroy
     render json: {}, status: :no_content

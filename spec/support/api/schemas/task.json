@@ -1,0 +1,13 @@
+{
+  "description": "Task",
+  "type": "object",
+  "properties": {
+    "id": { "type": "Integer" },
+    "project_id": { "type": "Integer" },
+    "name": { "type": "string" },
+    "done": { "type": "Boolean" },
+    "deadline": { "type": "string" },
+    "created_at": { "type": "string" },
+    "updated_at": { "type": "string" }
+  }
+}

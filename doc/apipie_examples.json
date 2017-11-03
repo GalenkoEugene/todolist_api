@@ -9,15 +9,15 @@
       "query": null,
       "request_data": {
         "project": {
-          "name": "Hard Boiled Brain"
+          "name": "Green Blow"
         }
       },
       "response_data": {
         "id": 6,
-        "name": "Hard Boiled Brain",
+        "name": "Green Blow",
         "user_id": 2,
-        "created_at": "2017-10-29T17:17:44.769Z",
-        "updated_at": "2017-10-29T17:17:44.769Z"
+        "created_at": "2017-11-03T09:23:24.387Z",
+        "updated_at": "2017-11-03T09:23:24.387Z"
       },
       "code": "201",
       "show_in_doc": 1,
@@ -32,7 +32,7 @@
       "query": null,
       "request_data": {
         "project": {
-          "name": "The Ninjas Without a Monster"
+          "name": "Invasion of the Fake Tears"
         }
       },
       "response_data": {
@@ -69,7 +69,7 @@
   "projects#destroy": [
     {
       "verb": "DELETE",
-      "path": "/api/v1/projects/15",
+      "path": "/api/v1/projects/12",
       "versions": [
         "1.0"
       ],
@@ -95,38 +95,38 @@
       "response_data": [
         {
           "id": 1,
-          "name": "jone_orn",
+          "name": "rhiannon.auer",
           "user_id": 1,
-          "created_at": "2017-10-29T17:17:44.453Z",
-          "updated_at": "2017-10-29T17:17:44.453Z"
+          "created_at": "2017-11-03T09:23:24.059Z",
+          "updated_at": "2017-11-03T09:23:24.059Z"
         },
         {
           "id": 2,
-          "name": "albert",
+          "name": "erica.hamill",
           "user_id": 1,
-          "created_at": "2017-10-29T17:17:44.458Z",
-          "updated_at": "2017-10-29T17:17:44.458Z"
+          "created_at": "2017-11-03T09:23:24.065Z",
+          "updated_at": "2017-11-03T09:23:24.065Z"
         },
         {
           "id": 3,
-          "name": "ingrid_feil",
+          "name": "madie",
           "user_id": 1,
-          "created_at": "2017-10-29T17:17:44.463Z",
-          "updated_at": "2017-10-29T17:17:44.463Z"
+          "created_at": "2017-11-03T09:23:24.070Z",
+          "updated_at": "2017-11-03T09:23:24.070Z"
         },
         {
           "id": 4,
-          "name": "marlin",
+          "name": "suanne_kozey",
           "user_id": 1,
-          "created_at": "2017-10-29T17:17:44.468Z",
-          "updated_at": "2017-10-29T17:17:44.468Z"
+          "created_at": "2017-11-03T09:23:24.075Z",
+          "updated_at": "2017-11-03T09:23:24.075Z"
         },
         {
           "id": 5,
-          "name": "stacie",
+          "name": "ula",
           "user_id": 1,
-          "created_at": "2017-10-29T17:17:44.473Z",
-          "updated_at": "2017-10-29T17:17:44.473Z"
+          "created_at": "2017-11-03T09:23:24.081Z",
+          "updated_at": "2017-11-03T09:23:24.081Z"
         }
       ],
       "code": "200",
@@ -151,8 +151,171 @@
         "user_id": 4,
         "id": 11,
         "name": "New owesome name",
-        "created_at": "2017-10-29T17:17:45.110Z",
-        "updated_at": "2017-10-29T17:17:45.201Z"
+        "created_at": "2017-11-03T09:23:24.759Z",
+        "updated_at": "2017-11-03T09:23:24.854Z"
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/18/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-11-04",
+          "name": "The Wolves from 8347 Leagues",
+          "project_id": "18"
+        }
+      },
+      "response_data": {
+        "id": 6,
+        "name": "The Wolves from 8347 Leagues",
+        "deadline": "2017-11-04T00:00:00.000Z",
+        "done": false,
+        "project_id": 18,
+        "created_at": "2017-11-03T09:23:25.553Z",
+        "updated_at": "2017-11-03T09:23:25.553Z"
+      },
+      "code": "201",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/19/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-11-02",
+          "name": "",
+          "project_id": "19"
+        }
+      },
+      "response_data": {
+        "name": [
+          "can't be blank"
+        ],
+        "deadline": [
+          "can't be in the past"
+        ]
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/projects/21/tasks/13",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+      },
+      "response_data": {
+      },
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects/17/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1,
+          "name": "skateboard",
+          "deadline": "2017-11-04T00:00:00.000Z",
+          "done": false,
+          "project_id": 17,
+          "created_at": "2017-11-03T09:23:25.230Z",
+          "updated_at": "2017-11-03T09:23:25.230Z"
+        },
+        {
+          "id": 2,
+          "name": "raw denim",
+          "deadline": "2017-11-04T00:00:00.000Z",
+          "done": false,
+          "project_id": 17,
+          "created_at": "2017-11-03T09:23:25.234Z",
+          "updated_at": "2017-11-03T09:23:25.234Z"
+        },
+        {
+          "id": 3,
+          "name": "locavore",
+          "deadline": "2017-11-04T00:00:00.000Z",
+          "done": false,
+          "project_id": 17,
+          "created_at": "2017-11-03T09:23:25.238Z",
+          "updated_at": "2017-11-03T09:23:25.238Z"
+        },
+        {
+          "id": 4,
+          "name": "iPhone",
+          "deadline": "2017-11-04T00:00:00.000Z",
+          "done": false,
+          "project_id": 17,
+          "created_at": "2017-11-03T09:23:25.242Z",
+          "updated_at": "2017-11-03T09:23:25.242Z"
+        },
+        {
+          "id": 5,
+          "name": "food truck",
+          "deadline": "2017-11-04T00:00:00.000Z",
+          "done": false,
+          "project_id": 17,
+          "created_at": "2017-11-03T09:23:25.247Z",
+          "updated_at": "2017-11-03T09:23:25.247Z"
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/projects/20/tasks/7",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-11-04",
+          "done": "true",
+          "name": "New owesome name",
+          "project_id": "20"
+        }
+      },
+      "response_data": {
+        "project_id": 20,
+        "id": 7,
+        "name": "New owesome name",
+        "deadline": "2017-11-04T00:00:00.000Z",
+        "done": true,
+        "created_at": "2017-11-03T09:23:25.859Z",
+        "updated_at": "2017-11-03T09:23:25.965Z"
       },
       "code": "200",
       "show_in_doc": 1,

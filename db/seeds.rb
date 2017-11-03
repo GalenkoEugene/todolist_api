@@ -1,11 +1,18 @@
 require 'ffaker'
 
 User.destroy_all
-Project.destroy_all
 
 User.create!(email: 'some@email.com', password: 123456789)
-User.create!(email: FFaker::Internet.email, password: FFaker::Internet.password)
 
-7.times{ Project.create!(name: FFaker::HipsterIpsum.word, user: User.all.sample) }
+7.times do
+  Project.create!(
+    name: FFaker::HipsterIpsum.word,
+    user: User.all.sample)
+end
+
+Project.all.each do |project|
+  project.tasks.create!(name: FFaker::HipsterIpsum.words.join(', '))
+  project.tasks.create!(name: FFaker::HipsterIpsum.words.join(', '))
+end
 
 puts ' Done! '.center(50, '=')
