@@ -8,6 +8,7 @@ class Api::V1::TasksController < ApplicationController
     error code: 401, desc: 'Unauthorized'
     error code: 404, desc: 'Not Found'
     error code: 422, desc: 'Unprocessable entity'
+    error code: 500, desc: 'Internal Server Error'
     formats ['json']
   end
 
@@ -15,6 +16,7 @@ class Api::V1::TasksController < ApplicationController
     param :task, Hash, action_aware: true, required: true do
       param :project_id, :number, required: true
       param :name, String, required: true
+      param :move, %i[up down], required: false
     end
   end
 
@@ -34,8 +36,10 @@ class Api::V1::TasksController < ApplicationController
   param_group :task
   param :id, :number, required: true
   def update
-    return render json: @task, status: :ok if @task.update(task_params)
-    render json: @task.errors.full_messages, status: :unprocessable_entity
+    UpdateTask.call(@task, params) do
+      on(:ok) { render json: @project.tasks, status: :ok }
+      on(:invalid) { render json: task.errors.full_messages, status: :unprocessable_entity }
+    end
   end
 
   api :DELETE, '/projects/:project_id/tasks/:id', 'Desroy task by :id'

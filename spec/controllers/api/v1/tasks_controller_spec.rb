@@ -90,7 +90,7 @@ RSpec.describe Api::V1::TasksController, type: :controller do
               project_id: project.id
             }
         expect(response).to have_http_status(:ok)
-        expect(response).to match_response_schema('task')
+        expect(response).to match_response_schema('tasks')
       end
     end
 

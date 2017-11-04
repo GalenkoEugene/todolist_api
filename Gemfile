@@ -16,6 +16,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'rack-cors', '~> 1.0', require: 'rack/cors'
 gem 'rails', '~> 5.1.4'
+gem 'rectify', '~> 0.10'
 
 group :development, :test do
   gem 'overcommit', '~> 0.41'
@@ -38,6 +39,7 @@ group :test do
   gem 'rails-controller-testing', '~> 1.0'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', '~> 0.15', require: false
+  gem 'wisper-rspec', '~> 1.0', require: false
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

@@ -12,7 +12,6 @@ end
 
 Project.all.each do |project|
   project.tasks.create!(name: FFaker::HipsterIpsum.words.join(', '))
-  project.tasks.create!(name: FFaker::HipsterIpsum.words.join(', '))
 end
 
 puts ' Done! '.center(50, '=')
