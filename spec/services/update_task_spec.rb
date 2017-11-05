@@ -66,6 +66,7 @@ RSpec.describe UpdateTask, type: :service do
         allow_any_instance_of(UpdateTask)
           .to receive(:reorder)
           .and_return(true)
+        allow(params).to receive(:[])
       end
 
       it 'save new name' do

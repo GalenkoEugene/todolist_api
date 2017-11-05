@@ -6,7 +6,7 @@ class UpdateTask < Rectify::Command
   end
 
   def call
-    return broadcast(:ok, task) if reorder && task.update(task_params)
+    return broadcast(:ok, task) if updated?
     broadcast(:invalid, task)
   end
 
@@ -14,8 +14,12 @@ class UpdateTask < Rectify::Command
 
   attr_reader :task, :params
 
+  def updated?
+    params[:move] ? reorder : task.update(task_params)
+  end
+
   def reorder
-    return true unless params[:move]
+    @task.prioritize = true
 
     case params[:move].to_s
     when 'up' then task.move_higher
@@ -25,6 +29,6 @@ class UpdateTask < Rectify::Command
   end
 
   def task_params
-    params.require(:task).permit(:name, :deadline, :done)
+    params.require(:task).permit(:id, :name, :deadline, :done)
   end
 end
