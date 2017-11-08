@@ -2,7 +2,7 @@ require 'ffaker'
 
 User.destroy_all
 
-User.create!(email: 'some@email.com', password: 123456789)
+User.create!(email: 'some@email.com', password: '123456789a')
 
 7.times do
   Project.create!(

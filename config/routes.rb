@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   namespace :api, { defaults: { format: :json } } do
     namespace :v1 do
-      resources :projects do
-        resources :tasks
+      resources :projects, except: :show do
+        resources :tasks, except: :show do
+          resources :comments, except: %i[show update]
+        end
       end
     end
   end

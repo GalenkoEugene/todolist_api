@@ -6,6 +6,6 @@ class Project < ApplicationRecord
             presence: true,
             uniqueness: {
               scope: :user_id,
-              message: 'The project with such name does already exist.'
+              message: I18n.t('errors.project_name')
             }
 end
