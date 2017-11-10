@@ -20,7 +20,6 @@ class UpdateTask < Rectify::Command
 
   def reorder
     @task.prioritize = true
-
     case params[:move].to_s
     when 'up' then task.move_higher
     when 'down' then task.move_lower

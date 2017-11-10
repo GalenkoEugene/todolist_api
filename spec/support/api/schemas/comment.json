@@ -1,10 +1,11 @@
 {
-  "description": "Project",
+  "description": "Comment",
   "type": "object",
   "properties": {
     "id": { "type": "number" },
-    "user_id": { "type": "number" },
-    "name": { "type": "string" },
+    "task_id": { "type": "number" },
+    "body": { "type": "string" },
+    "attachment": { "type": ["string", "null"] },
     "created_at": { "type": "string" },
     "updated_at": { "type": "string" }
   }

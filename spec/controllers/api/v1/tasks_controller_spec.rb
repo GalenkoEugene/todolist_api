@@ -105,6 +105,32 @@ RSpec.describe Api::V1::TasksController, type: :controller do
         expect(response).to have_http_status(:unprocessable_entity)
       end
     end
+
+    context 'move "up"' do
+      it 'update task position' do
+        put :update,
+            params: {
+              id: tasks.last.id,
+              task: { move: 'up' },
+              project_id: project.id
+            }
+        expect(response).to have_http_status(:ok)
+        expect(response).to match_response_schema('tasks')
+      end
+    end
+
+    context 'move "down"' do
+      it 'update task position' do
+        put :update,
+            params: {
+              id: tasks.first.id,
+              task: { move: 'down' },
+              project_id: project.id
+            }
+        expect(response).to have_http_status(:ok)
+        expect(response).to match_response_schema('tasks')
+      end
+    end
   end
 
   describe 'DELETE #destroy' do

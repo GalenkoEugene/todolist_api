@@ -43,8 +43,8 @@ RSpec.describe Api::V1::CommentsController, type: :controller do
 
   describe 'POST #create' do
     context 'valid params' do
-      login_user
       it 'returns a created response 201', :show_in_doc do
+        request.headers.merge!(user.create_new_auth_token)
         post :create, params: valid_params
         expect(response).to have_http_status :created
         expect(response.content_type).to eq('application/json')
@@ -60,8 +60,8 @@ RSpec.describe Api::V1::CommentsController, type: :controller do
     end
 
     context 'invalid params' do
-      login_user
       it 'returns a unprocessable_entity response 422', :show_in_doc do
+        request.headers.merge!(user.create_new_auth_token)
         post :create, params: invalid_params
         expect(response).to have_http_status :unprocessable_entity
         expect(response.content_type).to eq('application/json')

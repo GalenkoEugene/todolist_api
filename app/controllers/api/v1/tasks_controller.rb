@@ -16,7 +16,7 @@ class Api::V1::TasksController < ApplicationController
     param :task, Hash, action_aware: true, required: true do
       param :project_id, :number, required: true
       param :name, String, required: true
-      param :move, %i[up down], required: false
+      param :move, %w[up down], required: false
     end
   end
 

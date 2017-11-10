@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :comment do
-    body { FFaker::HipsterIpsum.words }
+    body { FFaker::Lorem.sentences }
     attachment 'MyString'
     task
   end
