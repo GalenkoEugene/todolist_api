@@ -1,7 +1,7 @@
 class Api::V1::TasksController < ApplicationController
   before_action :authenticate_user!
-  load_resource :project
-  load_resource :task, through: :project
+  load_and_authorize_resource :project
+  load_and_authorize_resource :task, through: :project
 
   resource_description do
     short '​List of tasks inside a project'

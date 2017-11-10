@@ -1,7 +1,7 @@
 class Api::V1::CommentsController < ApplicationController
   before_action :authenticate_user!
-  load_resource :task
-  load_resource :comment, through: :task
+  load_and_authorize_resource :task
+  load_and_authorize_resource :comment, through: :task
 
   resource_description do
     short '​List of comments on task'
