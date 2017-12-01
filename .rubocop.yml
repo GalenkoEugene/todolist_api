@@ -3,6 +3,7 @@ AllCops:
     - 'vendor/**/*'
     - 'tmp/**/*'
     - 'config/**/*'
+    - 'db/**/*'
   TargetRubyVersion: 2.4
 
 Metrics/LineLength:

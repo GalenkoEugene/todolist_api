@@ -1,0 +1,530 @@
+{
+  "comments#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/2/tasks/2/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "comment": {
+          "body": "A leopard cannot change its spots"
+        }
+      },
+      "response_data": {
+        "id": 4,
+        "body": "A house divided against itself cannot stand",
+        "attachment": {
+          "url": null,
+          "thumb": {
+            "url": null
+          }
+        },
+        "task_id": 2,
+        "created_at": "2017-11-08T20:10:01.749Z",
+        "updated_at": "2017-11-08T20:10:01.749Z"
+      },
+      "code": "201",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/3/tasks/3/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "comment": {
+          "body": "Valid comment!"
+        }
+      },
+      "response_data": {
+        "errors": [
+          "You need to sign in or sign up before continuing."
+        ]
+      },
+      "code": "401",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/4/tasks/4/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "comment": {
+          "body": "too short"
+        }
+      },
+      "response_data": {
+        "body": [
+          "is too short (minimum is 10 characters)"
+        ]
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "comments#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/projects/5/tasks/5/comments/5",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+      },
+      "response_data": {
+      },
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "comments#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects/1/tasks/1/comments",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 1,
+          "body": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-11-08T20:10:01.410Z",
+          "updated_at": "2017-11-08T20:10:01.410Z"
+        },
+        {
+          "id": 2,
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-11-08T20:10:01.417Z",
+          "updated_at": "2017-11-08T20:10:01.417Z"
+        },
+        {
+          "id": 3,
+          "body": "A little knowledge is a dangerous thing",
+          "attachment": {
+            "url": null,
+            "thumb": {
+              "url": null
+            }
+          },
+          "task_id": 1,
+          "created_at": "2017-11-08T20:10:01.423Z",
+          "updated_at": "2017-11-08T20:10:01.423Z"
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "project": {
+          "name": "Codename: Blow"
+        }
+      },
+      "response_data": {
+        "id": 11,
+        "name": "Codename: Blow",
+        "user_id": 9,
+        "created_at": "2017-11-08T20:10:02.626Z",
+        "updated_at": "2017-11-08T20:10:02.626Z"
+      },
+      "code": "201",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "project": {
+          "name": "The Woman from Hell"
+        }
+      },
+      "response_data": {
+        "errors": [
+          "You need to sign in or sign up before continuing."
+        ]
+      },
+      "code": "401",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "project": {
+          "name": ""
+        }
+      },
+      "response_data": {
+        "name": [
+          "can't be blank"
+        ]
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/projects/18",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+      },
+      "response_data": {
+      },
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 6,
+          "name": "sueann",
+          "user_id": 8,
+          "created_at": "2017-11-08T20:10:02.321Z",
+          "updated_at": "2017-11-08T20:10:02.321Z"
+        },
+        {
+          "id": 7,
+          "name": "tierra",
+          "user_id": 8,
+          "created_at": "2017-11-08T20:10:02.326Z",
+          "updated_at": "2017-11-08T20:10:02.326Z"
+        },
+        {
+          "id": 8,
+          "name": "porfirio",
+          "user_id": 8,
+          "created_at": "2017-11-08T20:10:02.331Z",
+          "updated_at": "2017-11-08T20:10:02.331Z"
+        },
+        {
+          "id": 9,
+          "name": "marni.morar",
+          "user_id": 8,
+          "created_at": "2017-11-08T20:10:02.337Z",
+          "updated_at": "2017-11-08T20:10:02.337Z"
+        },
+        {
+          "id": 10,
+          "name": "bonny.bogisich",
+          "user_id": 8,
+          "created_at": "2017-11-08T20:10:02.342Z",
+          "updated_at": "2017-11-08T20:10:02.342Z"
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "projects#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/projects/12",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "project": {
+          "name": "New owesome name"
+        }
+      },
+      "response_data": {
+        "user_id": 11,
+        "id": 12,
+        "name": "New owesome name",
+        "created_at": "2017-11-08T20:10:02.929Z",
+        "updated_at": "2017-11-08T20:10:03.048Z"
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#create": [
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/23/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-11-09",
+          "name": "Ultra Woman",
+          "project_id": "23"
+        }
+      },
+      "response_data": {
+        "id": 11,
+        "name": "Ultra Woman",
+        "deadline": "2017-11-09T00:00:00.000Z",
+        "done": false,
+        "project_id": 23,
+        "created_at": "2017-11-08T20:10:03.714Z",
+        "updated_at": "2017-11-08T20:10:03.714Z",
+        "position": 1,
+        "comments_count": 0
+      },
+      "code": "201",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "POST",
+      "path": "/api/v1/projects/24/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-11-07",
+          "name": "",
+          "project_id": "24"
+        }
+      },
+      "response_data": {
+        "name": [
+          "can't be blank"
+        ],
+        "deadline": [
+          "can't be in the past"
+        ]
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#destroy": [
+    {
+      "verb": "DELETE",
+      "path": "/api/v1/projects/26/tasks/21",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+      },
+      "response_data": {
+      },
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#index": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/projects/22/tasks",
+      "versions": [
+        "1.0"
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": [
+        {
+          "id": 6,
+          "name": "echo park",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 22,
+          "created_at": "2017-11-08T20:10:03.397Z",
+          "updated_at": "2017-11-08T20:10:03.397Z",
+          "position": 1,
+          "comments_count": 0
+        },
+        {
+          "id": 7,
+          "name": "stumptown",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 22,
+          "created_at": "2017-11-08T20:10:03.402Z",
+          "updated_at": "2017-11-08T20:10:03.402Z",
+          "position": 2,
+          "comments_count": 0
+        },
+        {
+          "id": 8,
+          "name": "dreamcatcher",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 22,
+          "created_at": "2017-11-08T20:10:03.408Z",
+          "updated_at": "2017-11-08T20:10:03.408Z",
+          "position": 3,
+          "comments_count": 0
+        },
+        {
+          "id": 9,
+          "name": "PBR",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 22,
+          "created_at": "2017-11-08T20:10:03.413Z",
+          "updated_at": "2017-11-08T20:10:03.413Z",
+          "position": 4,
+          "comments_count": 0
+        },
+        {
+          "id": 10,
+          "name": "Marfa",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 22,
+          "created_at": "2017-11-08T20:10:03.419Z",
+          "updated_at": "2017-11-08T20:10:03.419Z",
+          "position": 5,
+          "comments_count": 0
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "tasks#update": [
+    {
+      "verb": "PUT",
+      "path": "/api/v1/projects/25/tasks/14",
+      "versions": [
+        "1.0"
+      ],
+      "query": null,
+      "request_data": {
+        "task": {
+          "deadline": "2017-11-09",
+          "done": "true",
+          "name": "New owesome name",
+          "project_id": "25"
+        }
+      },
+      "response_data": [
+        {
+          "id": 12,
+          "name": "chambray",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 25,
+          "created_at": "2017-11-08T20:10:04.023Z",
+          "updated_at": "2017-11-08T20:10:04.023Z",
+          "position": 1,
+          "comments_count": 0
+        },
+        {
+          "id": 13,
+          "name": "retro",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 25,
+          "created_at": "2017-11-08T20:10:04.029Z",
+          "updated_at": "2017-11-08T20:10:04.029Z",
+          "position": 2,
+          "comments_count": 0
+        },
+        {
+          "id": 14,
+          "name": "New owesome name",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": true,
+          "project_id": 25,
+          "created_at": "2017-11-08T20:10:04.034Z",
+          "updated_at": "2017-11-08T20:10:04.168Z",
+          "position": 3,
+          "comments_count": 0
+        },
+        {
+          "id": 15,
+          "name": "cliche",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 25,
+          "created_at": "2017-11-08T20:10:04.040Z",
+          "updated_at": "2017-11-08T20:10:04.040Z",
+          "position": 4,
+          "comments_count": 0
+        },
+        {
+          "id": 16,
+          "name": "twee",
+          "deadline": "2017-11-09T00:00:00.000Z",
+          "done": false,
+          "project_id": 25,
+          "created_at": "2017-11-08T20:10:04.045Z",
+          "updated_at": "2017-11-08T20:10:04.045Z",
+          "position": 5,
+          "comments_count": 0
+        }
+      ],
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}

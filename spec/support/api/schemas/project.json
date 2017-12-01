@@ -1,0 +1,11 @@
+{
+  "description": "Project",
+  "type": "object",
+  "properties": {
+    "id": { "type": "number" },
+    "user_id": { "type": "number" },
+    "name": { "type": "string" },
+    "created_at": { "type": "string" },
+    "updated_at": { "type": "string" }
+  }
+}

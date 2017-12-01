@@ -1,0 +1,12 @@
+{
+  "description": "Comment",
+  "type": "object",
+  "properties": {
+    "id": { "type": "number" },
+    "task_id": { "type": "number" },
+    "body": { "type": "string" },
+    "attachment": { "type": ["string", "null"] },
+    "created_at": { "type": "string" },
+    "updated_at": { "type": "string" }
+  }
+}
